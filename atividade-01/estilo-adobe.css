@@ -1,0 +1,43 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0D1B2A; 
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #1B263B; 
+    color: #00B4D8; 
+    text-align: center;
+    padding: 15px;
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    color: #00B4D8; 
+    margin: 0 15px;
+}
+
+p {
+    color: #E0E1DD; 
+    margin: 10px 15px;
+    line-height: 1.5;
+}
+
+.autor {
+    background-color: #1B263B;
+    color: #E0E1DD;
+    text-align: right;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    margin: 10px 0 0 0;
+}
+
+.separador {
+    text-align: center;
+    color: #00B4D8; 
+    font-size: 1.5em;
+    margin: 10px 0 20px 0;
+    letter-spacing: 5px;
+}
