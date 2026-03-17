@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+    --bg-body: #A5A692;
+    --bg-h1: #011F26;
+    --cor-h1: #FFFFFF;
+    --cor-h2-sep: #025E73;
+    --cor-texto: #000000;
+    --bg-autor: #BFB78F;
+    
+    --tamanho-base: 1rem;
+    --tamanho-h1: 3rem;
+    --espaco-letra-h1: 0.5rem;
+    --tamanho-h2: 1.5rem;
+    --tamanho-autor: 0.8rem;
+}
+
+body.tema-adobe {
+    --bg-body: #0D1B2A;
+    --bg-h1: #1B263B;
+    --cor-h1: #00B4D8;
+    --cor-h2-sep: #00B4D8;
+    --cor-texto: #E0E1DD;
+    --bg-autor: #1B263B;
+}
+
+body.tema-monocromatico {
+    --bg-body: linear-gradient(to bottom, #ffffff, #808080);
+    --bg-h1: #000000;
+    --cor-h1: #ffffff;
+    --cor-h2-sep: #333333;
+    --cor-texto: #000000;
+    --bg-autor: #e0e0e0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: var(--tamanho-base);
+    background: var(--bg-body);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    background-color: var(--bg-h1); 
+    color: var(--cor-h1); 
+    font-size: var(--tamanho-h1);
+    letter-spacing: var(--espaco-letra-h1);
+    text-align: center;
+    padding: 15px;
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    color: var(--cor-h2-sep); 
+    font-size: var(--tamanho-h2);
+    margin: 0 15px;
+}
+
+p {
+    margin: 10px 15px;
+    line-height: 1.5;
+}
+
+.autor {
+    background-color: var(--bg-autor);
+    text-align: right;
+    padding: 5px 15px;
+    font-size: var(--tamanho-autor);
+    font-style: italic;
+    margin: 10px 0 0 0;
+}
+
+.separador {
+    color: var(--cor-h2-sep); 
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px 0 20px 0;
+    letter-spacing: 5px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 15px;
+    margin: 10px 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.texto-tilt-neon {
+    font-family: 'Tilt Neon', sans-serif;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.p1 { font-weight: 700; }
+.p2 { font-weight: 900; }
+.p3 { font-style: oblique 10deg; }
+.p4 { font-style: oblique 20deg; }
