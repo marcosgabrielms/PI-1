@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades PI-1 | PI-1</title>
+    <style>
+        
+        :root {
+            --bg-fundo: #0a0e0a;      
+            --bg-cartao: #121a14;     
+            --cor-texto: #c8decb;     
+            --verde-neon: #00ff66;    
+            --verde-hover: #5cf599;  
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-fundo);
+            color: var(--cor-texto);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--verde-neon);
+            text-align: center;
+            border-bottom: 2px solid var(--verde-neon);
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .cartao-atividade {
+            background-color: var(--bg-cartao);
+            border: 1px solid #1f2e23;
+            border-left: 5px solid var(--verde-neon);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 255, 102, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .cartao-atividade:hover {
+            transform: translateY(-5px);
+            border-left-color: var(--verde-hover);
+        }
+
+        .cartao-atividade h2 {
+            color: var(--verde-neon);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 12px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "►";
+            color: var(--verde-neon);
+            position: absolute;
+            left: 0;
+            font-size: 0.8em;
+            top: 4px;
+        }
+
+        a {
+            color: var(--cor-texto);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--verde-hover);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Programação para a Internet I</h1>
+
+        <div class="cartao-atividade">
+            <h2>Atividade 01</h2>
+            <p>Introdução à estrutura básica do HTML e testes de formatação.</p>
+            <ul>
+                <li><a href="atividade-01/mini_blog.html">Mini Blog de Tecnologia</a></li>
+                <li><a href="atividade-01/hello_world.html">Página: Hello World</a></li>
+                <li><a href="atividade-01/exame_vista.html">Página: Exame de Vista</a></li>
+                <li><a href="atividade-01/pagina_simbolos.html">Página: Símbolos, Emojis & Entidades</a></li>
+            </ul>
+        </div>
+
+        <div class="cartao-atividade">
+            <h2>Atividade 02</h2>
+            <p>Evolução com testes de resolução de imagens, variáveis CSS e tipografia avançada.</p>
+            <ul>
+                <li><a href="atividade-02/index.html">Mini Blog de Tecnologia 2.0 </a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
