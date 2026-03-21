@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
+.img-teste {
+    width: 300px;
+    display: block;
+    max-width: 320px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;   
+}
+
+.img-teste:hover {
+    transform: scale(1.03);
+}
+
+.img-teste + p {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 12px;
+    opacity: 0.8;
+}
+
+.titulo-img {
+    text-align: center;
+    color: var(--cor-h2-sep);
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+
 :root {
     --bg-body: #A5A692;
     --bg-h1: #011F26;
@@ -51,12 +81,17 @@ h1 {
     text-align: center;
     padding: 15px;
     margin: 0 0 20px 0;
+
 }
 
 h2 {
     color: var(--cor-h2-sep); 
     font-size: var(--tamanho-h2);
-    margin: 0 15px;
+    margin: 0 15px 20px 15px; 
+}
+
+.titulo-centralizado {
+    text-align: center;
 }
 
 p {
@@ -100,3 +135,115 @@ pre {
 .p2 { font-weight: 900; }
 .p3 { font-style: oblique 10deg; }
 .p4 { font-style: oblique 20deg; }
+
+.lista-bebidas {
+    color: #e5e7eb;
+    list-style-position: inside;
+    max-width: 400px;
+    margin: auto;
+    padding: 0;
+}
+
+.lista-bebidas li {
+    background: #374151;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    transition: 0.2s; 
+}
+
+.lista-bebidas li:hover {
+    transform: translateX(6px); 
+    background: #4b5563; 
+}
+.lista-bebidas li:first-child::before {
+    content: "☕ "; 
+}
+.lista-estudos {
+    max-width: 600px;
+    margin: 20px auto;
+    list-style: none; 
+    counter-reset: contador-estudos; 
+    padding: 0 15px;
+}
+.item-principal {
+    background: #9ba4d5; 
+    border-radius: 12px;
+    padding: 20px 20px 20px 55px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+}
+.item-principal::before {
+    counter-increment: contador-estudos;
+    content: "0" counter(contador-estudos) ".";
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.item-principal h3 {
+    margin: 0 0 10px 0;
+    color: #000;
+    text-align: left;
+}
+
+
+.sublista {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sublista li {
+    margin: 8px 0;
+    color: #222;
+    position: relative;
+    padding-left: 30px;
+}
+
+
+.sublista li::before {
+    content: "🎯";
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+
+.sublista li.concluido {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-h2-sep);
+    display: inline-block;
+    transition: all 0.4s ease;
+    margin: 5px 0;
+}
+
+a:hover {
+    color: #ff475f;
+    transform: translateX(10px) scale(1.05);
+    font-weight: bold;
+    border-left: 4px solid var(--cor-h2-sep);
+    padding-left: 8px;
+}
+nav ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.link-voltar {
+    font-size: 0.9 rem;
+    font-style: italic;
+    margin-left: 15px;
+}
