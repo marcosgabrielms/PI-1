@@ -12,15 +12,26 @@
     </button>
 
     <h1>Mini Blog de Tecnologia</h1>
-
-    <h2>Primeiros passos com HTML</h2>
-    <p>HTML é a base das páginas web. Com ele organizamos títulos, textos e a estrutura do conteúdo apresentado no navegador.</p>
-    <p class="autor">Autor: Ely Miranda | Data: 08/03/2026</p>
+    <nav id="topo">
+        <h2 class="titulo-centralizado">Menu de Navegação</h2>
+        <ul>
+            <li><a href="#post-html">Primeiros passos com HTML</a></li>
+            <li><a href="#post-css">O papel do CSS</a></li>
+            <li><a href="#post-imagens">Teste de Resolução de Imanges</a></li>
+        </ul>
+    </nav>
     <p class="separador">&#9733; &#9733; &#9733;</p>
 
-    <h2>O papel do CSS</h2>
+    <h2 class="post-html">Primeiros passos com HTML</h2>
+    <p>HTML é a base das páginas web. Com ele organizamos títulos, textos e a estrutura do conteúdo apresentado no navegador.</p>
+    <p class="autor">Autor: Ely Miranda | Data: 08/03/2026</p>
+    <a href="#topo" class="link-voltar">↑ Voltar ao topo</a>
+    <p class="separador">&#9733; &#9733; &#9733;</p>
+
+    <h2 class="post-css">O papel do CSS</h2>
     <p>O CSS define a aparência da página. Ele permite alterar cores, alinhamentos e tipografia, deixando os sites mais agradáveis visualmente.</p>
     <p class="autor">Autor: Ely Miranda | Data: 08/03/2026</p>
+    <a href="#topo" class="link-voltar">↑ Voltar ao topo</a>
     <p class="separador">&#9733; &#9733; &#9733;</p>
 
     <h2>Validação do código</h2>
@@ -53,21 +64,61 @@ def imprimir_padrao(num_linhas):
     <p class="autor">Autor: Ely Miranda | Data: 08/03/2026</p>
     <p class="separador">&#9733; &#9733; &#9733;</p>
 
-    <h2>Teste de Resolução de Imagens</h2>
+    <h2 id="post-imagens" class="titulo-centralizado">Teste de Resolução de Imagens</h2>
+    <a href="#topo" class="link-voltar">↑ Voltar ao topo</a>
+    <p class="separador">&#9733; &#9733; &#9733;</p>
     
-    <h3>Imagem de baixa resolução</h3>
-    <img class="img-teste" src="assets/img/baixa.jpg" alt="imagem de baixa resolução">
+    <h3 class="titulo-img">Imagem de baixa resolução</h3>
+    <img class="img-teste" src="https://placecats.com/640/960" alt="Gato de baixa resolução">
     <p>Imagem leve e rápida.</p>
 
-    <h3>Imagem de média resolução</h3>
-    <img class="img-teste" src="assets/img/media.jpg" alt="imagem de média resolução">
+    <h3 class="titulo-img">Imagem de média resolução</h3>
+    <img class="img-teste" src="https://placecats.com/1280/1920" alt="Gato de média resolução">
     <p>Equilíbrio entre qualidade e desempenho.</p>
 
-    <h3>Imagem de alta resolução</h3>
-    <img class="img-teste" src="assets/img/alta.jpg" alt="imagem de alta resolução">
+    <h3 class="titulo-img">Imagem de alta resolução</h3>
+    <img class="img-teste" src="https://placecats.com/1920/2880" alt="Gato de alta resolução">
     <p>Alta qualidade, maior tempo de carregamento.</p>
     <p class="separador">&#9733; &#9733; &#9733;</p>
 
+    <h2 class="titulo-centralizado">As Minhas Bebidas Favoritas</h2>
+    <ol class="lista-bebidas">
+        <li>Café expresso intenso</li>
+        <li>Cappuccino cremoso</li>
+        <li>Chocolate quente especial</li>
+        <li>Chá de hortelã</li>   
+    </ol>
+    <p class="separador">&#9733; &#9733; &#9733;</p>
+
+
+    <h2 class="titulo-centralizado">Roteiro de Estudos</h2>
+    <ol class="lista-estudos">
+        <li class="item-principal">
+            <h3>Aprender HTML</h3>
+            <ul class="sublista">
+                <li class="concluido">Revisar estrutura básica</li>
+                <li>Centralizar elementos</li>
+                <li>Ajustar margens e espaçamentos</li>
+            </ul>
+        </li>
+        <li class="item-principal">
+            <h3>Aprender CSS</h3>
+            <ul class="sublista">
+                <li class="concluido">Aplicar cores e fontes</li>
+                <li>Centralizar elementos</li>
+                <li>Ajustar margens e espaçamentos</li>
+            </ul>
+        </li>
+        <li class="item-principal">
+            <h3>Aprender JavaScript</h3>
+            <ul class="sublista">
+                <li>Criar botão de teste</li>
+                <li>Mostrar mensagem com alert</li>
+                <li>Alterar conteúdo de um elemento</li>
+            </ul>
+        </li>        
+    </ol>
+    <p class="separador">&#9733; &#9733; &#9733;</p>
     <script src="js/scripts.js"></script>
 </body>
 </html>
