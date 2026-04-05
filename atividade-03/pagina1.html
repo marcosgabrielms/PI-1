@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog do ADS - III</title>
+    <link href="css/estilos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1 id="titulo">BLOG DO ADS - 3</h1>
+            <h2 id="subtitulo">O melhor blog de atualidades</h2>
+            <nav>
+                <button class="menu-toggle" id="menu-toggle">&#9776; Menu</button>
+                <ul id="nav-menu">
+                    <li><a href="#container">Início</a></li>
+                    <li><a href="#artigos">Postagens</a></li>
+                    <li><a href="#tabelas-imagens">Tabelas e Imagens</a></li>
+                    <li><a href="#primeira">Primeira Postagem</a></li>
+                    <li><a href="pagina2.html">Página 2</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="artigos">
+                <article class="card" id="ultima">
+                    <h2>Box model</h2>
+                    <div id="bm-1">Instituto Federal do Piauí</div>
+                    <div id="bm-2">Instituto Federal do Piauí</div>
+                    <div id="bm-3">Instituto Federal do Piauí</div>
+                    <p class="autor-data">por Ely Miranda em 03/03/2026</p>
+                </article>
+
+                <article class="card" id="formularios">
+                    <h2>Formulários</h2>
+                    
+                    <fieldset>
+                        <legend>Mudar cores da página</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cor-fundo">Cor de Fundo:</label>
+                                <input type="color" id="cor-fundo" name="cor-fundo" value="#494646">
+                            </div>
+                            <div class="form-group">
+                                <label for="cor-texto">Cor do Texto:</label>
+                                <input type="color" id="cor-texto" name="cor-texto" value="#ffffff">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Busca no Google e YouTube</legend>
+                        <form action="http://www.google.com/search" method="get" target="_blank" class="form-margin">
+                            <div class="form-group">
+                                <label>Termo (Google):</label>
+                                <input type="text" name="q" class="form-control">
+                            </div>
+                            <button type="submit" class="btn">Pesquisar no Google</button>
+                        </form>
+                        <hr style="margin: 15px 0; border: 0; border-top: 1px dashed #ccc;">
+                        <form action="https://www.youtube.com/results" method="get" target="_blank">
+                            <div class="form-group">
+                                <label for="search">Termo (YouTube):</label>
+                                <input type="text" id="search" name="search_query" class="form-control">
+                            </div>
+                            <button type="submit" class="btn">Pesquisar no YouTube</button>
+                        </form>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Formulário básico de login e senha</legend>
+                        <form action="javascript:void(0);" onsubmit="alert('Login simulado com sucesso!');">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="login">Login</label>
+                                    <input type="text" id="login" name="login" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" id="senha" name="senha" class="form-control">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn">Entrar</button>
+                        </form>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Formulário de cadastro com checkboxes e botões de rádio</legend>
+                        <form action="javascript:void(0);" onsubmit="alert('Cadastro simulado!');">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="nome" name="nome" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group box-opcoes">
+                                    <p class="label-title">Gênero</p>
+                                    <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+                                    <label><input type="radio" name="genero" value="feminino"> Feminino</label>
+                                    <label><input type="radio" name="genero" value="outro"> Outro</label>
+                                </div>
+                                
+                                <div class="form-group box-opcoes">
+                                    <p class="label-title">Interesses</p>
+                                    <label><input type="checkbox" name="interesse1"> Programação</label>
+                                    <label><input type="checkbox" name="interesse2"> Design</label>
+                                    <label><input type="checkbox" name="interesse3"> Marketing</label>
+                                </div>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn">Cadastrar</button>
+                        </form>
+                    </fieldset>
+                    <p class="autor-data">por Ely Miranda em 03/03/2026</p>
+                </article>
+
+                <article class="card" id="tabelas-imagens">
+                    <h2>Tabelas</h2>
+
+                    <h3>Tabela básica apenas com table, tr e td</h3>
+                    <table class="tabela1">
+                        <tr><td>Célula 1,1</td><td>Célula 1,2</td><td>Célula 1,3</td></tr>
+                        <tr><td>Célula 2,1</td><td>Célula 2,2</td><td>Célula 2,3</td></tr>
+                    </table>
+
+                    <h3>Tabela com cabeçalho sobre notas de alunos</h3>
+                    <table class="tabela2">
+                        <tr><th>Aluno</th><th>Nota 1</th><th>Nota 2</th><th>Média</th></tr>
+                        <tr><td>Ana</td><td>8,5</td><td>9,0</td><td>8,75</td></tr>
+                        <tr><td>Bruno</td><td>7,0</td><td>6,5</td><td>6,75</td></tr>
+                    </table>
+
+                    <h3>Tabela sobre filmes com colspan e rowspan</h3>
+                    <table class="tabela3">
+                        <tr><th>Filme</th><th>Ano</th><th>Gênero</th></tr>
+                        <tr><td rowspan="2">O Senhor dos Anéis</td><td>2001</td><td>Fantasia/Aventura</td></tr>
+                        <tr><td>2002</td><td>Fantasia/Aventura</td></tr>
+                        <tr><td colspan="2">Matrix</td><td>Ação/Ficção Científica</td></tr>
+                    </table>
+
+                    <h3>Nova Tabela Complexa (Atividade 3)</h3>
+                    <table class="tabela-complexa">
+                        <caption>Desempenho de Vendas Anual</caption>
+                        <colgroup>
+                            <col class="col-destaque">
+                            <col class="col-padrao" span="2">
+                        </colgroup>
+                        <thead>
+                            <tr><th>Produto</th><th>Semestre 1</th><th>Semestre 2</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Licenças de Software</td><td>150 un.</td><td>230 un.</td></tr>
+                            <tr><td>Manutenção</td><td>45 contratos</td><td>60 contratos</td></tr>
+                        </tbody>
+                        <tfoot>
+                            <tr><td>Total Geral</td><td>195 itens</td><td>290 itens</td></tr>
+                        </tfoot>
+                    </table>
+                    <p class="autor-data">por Ely Miranda em 03/03/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a></li>
+                        <li><a href="#rodape">Ir para o Rodapé</a></li>
+                    </ul>
+                    <p class="autor-data">por Ely Miranda em 03/03/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Listas</h2>
+                    <h3>Lista ordenada de prioridades</h3>
+                    <ol>
+                        <li class="ol-item1">Estudar para a prova de PI</li>
+                        <li class="ol-item2">Fazer os exercícios de PI</li>
+                        <li class="ol-item3">Assistir às aulas de PI</li>
+                        <li class="ol-item4">Fazer os exercícios de LP1</li>
+                    </ol>
+                    <h3>Lista não ordenada de itens</h3>
+                    <ul>
+                        <li class="ul-item1">Café</li>
+                        <li class="ul-item2">Leite</li>
+                        <li class="ul-item3">Pão</li>
+                        <li class="ul-item4">Manteiga</li>
+                    </ul>
+                    <p class="autor-data">por Ely Miranda em 03/03/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Imagens</h2>
+
+                    <h3>Logo original do IFPI:</h3>
+                    <img src="https://www.ifpi.edu.br/topo_ifpi.png" alt="logo do ifpi">
+
+                    <h3>Imagem relativa original:</h3>
+                    <img class="imagem-relativa" src="imagens/opazul.jpg" alt="imagem de um quadrado azul">
+
+                    <h3>Repetição de imagens original:</h3>
+                    <div class="div1"></div>
+                    <div class="div2"></div>
+                    <div class="div3"></div>
+
+                    <hr style="margin: 20px 0; border: 0; border-top: 1px dashed #ccc;">
+
+                    <h3>Imagens Responsivas (Atividade 3)</h3>
+                    <h4>max-width: 100% e height: auto</h4>
+                    <img src="imagens/opazul.jpg" alt="Exemplo" class="img-responsive">
+                    
+                    <h4>Aspect Ratio (16/9) e Object-Fit Cover</h4>
+                    <div class="img-box">
+                        <img src="imagens/opazul.jpg" alt="Exemplo 2" class="img-cover">
+                    </div>
+
+                    <h4>Picture Element (Art Direction)</h4>
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="imagens/opazul.jpg">
+                        <img src="imagens/opazul.jpg" alt="Exemplo Art Direction" class="img-responsive">
+                    </picture>
+                    <p class="autor-data">por Ely Miranda em 03/03/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Espaçamento</h2>
+                    <p class="entre-letras" lang="zxx">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="entre-linhas" lang="zxx">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo non cumque vero consequatur.</p>
+                    <p class="autor-data">por Ely Miranda em 24/02/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Fontes</h2>
+                    <p class="qs-light">Fonte Quicksand</p>
+                    <p class="qs-strong">Fonte Quicksand super negrito</p>
+                    <p class="tilt-light">Fonte Tilt light</p>
+                    <p class="tilt-italic">Fonte Tilt itálica</p>
+                    <p class="autor-data">por Ely Miranda em 24/02/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Alinhamentos</h2>
+                    <p class="centralizado" lang="zxx">Parágrafo centralizado. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="direita" lang="zxx">Parágrafo à direita. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="justificado" lang="zxx">Parágrafo justificado. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eius doloremque provident esse, vero ipsa facilis.</p>
+                    <p class="autor-data">por Ely Miranda em 24/02/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Cores</h2>
+                    <p class="laranja">Texto em laranja</p>
+                    <p class="cinza">Texto cinza</p>
+                    <p class="ciano">Texto ciano</p>
+                    <p class="autor-data">por Ely Miranda em 24/02/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Símbolos e entidades</h2>
+                    <p>A tag inicial do html é &lt;html&gt; e fecha com &lt;/html&gt;</p>
+                    <p>Os símbolos de algumas moedas: Euro - &euro;, Dólar - &dollar; e Yene - &yen;</p>
+                    <p>Cora&ccedil;&atilde;o e ap&ecirc;ndice</p>
+                    <p>Alfabeto grego: &alpha;, &beta;, &gamma; e &omega;</p>
+                    <p>E&nbsp;m&nbsp;o&nbsp;j&nbsp;i&nbsp;s&nbsp;: &#128512; &#128176;&#128327;</p>
+                    <p class="autor-data">por Ely Miranda em 24/02/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Formatações simples</h2>
+                    <p>Texto em <em>itálico</em></p>
+                    <p>Texto em <strong>negrito</strong></p>
+                    <p>Texto <u>sublinhado</u></p>
+                    <p class="autor-data">por Ely Miranda em 24/02/2026</p>
+                </article>
+
+                <article class="card">
+                    <h2>Segunda postagem</h2>
+                    <p class="justificado" lang="zxx">Parágrafo maior... Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsum vel provident similique voluptate illum tenetur rem, aliquam ad natus, sequi rerum laborum.</p>
+                    <p class="autor-data">por Ely Miranda em 22/02/2026</p>
+                </article>
+
+                <article class="card" id="primeira">
+                    <h2>Postagem inicial</h2>
+                    <p>Hello World!</p>
+                    <p class="autor-data">por Ely Miranda em 21/02/2026</p>
+                </article>
+            </section>
+
+            <aside>
+                <div class="card sidebar-card">
+                    <h2>Links Sugeridos</h2>
+                    <ul>
+                        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                        <li><a href="https://git-scm.com/doc" target="_blank">Git Documentation</a></li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                        <li><a href="https://devdocs.io/" target="_blank">DevDocs</a></li>
+                        <li><a href="https://caniuse.com/" target="_blank">Can I Use</a></li>
+                        <li><a href="https://roadmap.sh/" target="_blank">roadmap.sh</a></li>
+                        <li><a href="https://www.w3schools.com/js/" target="_blank">JavaScript (W3Schools)</a></li>
+                        <li><a href="https://react.dev/" target="_blank">React</a></li>
+                        <li><a href="https://docs.docker.com/" target="_blank">Docker</a></li>
+                    </ul>
+                </div>
+
+                <div class="card sidebar-card">
+                    <h2>Sobre o Autor</h2>
+                    <p>Marcos Gabriel (Estudante - ADS-IFPI).</p>
+                </div>
+            </aside>
+        </main>
+
+        <footer id="rodape">
+            <p>Rodapé da página - Subir <a href="#container">↑</a></p>
+        </footer>
+    </div>
+</body>
+</html>
