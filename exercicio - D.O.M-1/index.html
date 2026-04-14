@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade D.O.M 1</title>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .questao {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;    
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="questao">
+        <h2> Questões 1 e 5</h2>
+        <p><strong>1. D.O.M</strong> É a "Árvore de objetos" criada pelo navegador. É aplicada em documentos HTML,
+        permitindo que o JavaScript acesse e modifique elementos da tela dinamicamente.</p>
+        <p><strong>5. Diferenças de propriedades:</strong><br>
+        -<i>innerHTML:</i> Retorna o texto junto com as tags HTML que estiverem dentro.<br>
+        -<i>innerText:</i> Retorna apenas o texto que está visível na tela.<br>
+        -<i>textContent:</i> Retorna o texto puro do código-fonte, ignorando a formatação e ocultações.
+        </p>
+    </div>  
+
+    <div class="questao">
+    <h2>Questões 2 e 3 </h2>
+    <div id="caixa-paragrafos">
+        <p>Primeiro Parágrafo</p>
+        <p>Segundo Parágrafo</p>
+        <p>Terceiro Parágrafo</p>
+    </div>
+    <button id="botaoContar"> Contar Parágrafos</button>
+    <div id="resultado-contagem" style="color: blue;font-weight: bold;margin-top: 10px;"></div>
+    </div>
+
+    <div class="questao">
+        <h2>Questão 4</h2>
+        <p id="paragrafo"> "Clique Aqui = Altera o texto" "Limpar = limpa o texto"</p>
+        <button id="botaoAlterar">Alterar Texto</button>
+        <button id="botaoLimpar">Limpar</button>
+    </div>    
+</body>
+</html>
