@@ -1,58 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade D.O.M 1</title>
     <script src="script.js" defer></script>
     <style>
+        :root {
+            --bg-fundo: #0a0e0a;
+            --bg-questao: #121a14;
+            --borda-questao: #1f2e23;
+            --cor-texto: #c8decb;
+            --verde-principal: #00ff66;
+            --amarelo-detalhe: #ffcc00;
+        }
+
+        input {
+            background-color: #000;
+            color: var(--verde-principal);
+            border: 1px solid var(--verde-principal);
+            padding: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg-fundo);
+            color: var(--cor-texto);
             margin: 20px;
             line-height: 1.6;
         }
+        
+        h1, h2 {
+            color: var(--verde-principal);
+        }
+
         .questao {
-            border: 1px solid #ccc;
+            border: 1px solid var(--borda-questao);
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 5px;
-            background-color: #f9f9f9;    
+            background-color: var(--bg-questao);    
         }
+        
         button {
+            background-color: var(--verde-principal);
+            color: #000;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
             margin-top: 10px;
-            padding: 5px 10px;
+            padding: 8px 15px;
             cursor: pointer;
+            border: none;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--amarelo-detalhe);
         }
     </style>
 </head>
 <body>
+    <h1>Resolução: Exercícios sobre DOM 01</h1>
+
     <div class="questao">
-        <h2> Questões 1 e 5</h2>
-        <p><strong>1. D.O.M</strong> É a "Árvore de objetos" criada pelo navegador. É aplicada em documentos HTML,
-        permitindo que o JavaScript acesse e modifique elementos da tela dinamicamente.</p>
+        <h2>Questões 1 e 5</h2>
+        <p><strong>1. D.O.M</strong> É a "Árvore de objetos" criada pelo navegador. É aplicada em documentos HTML, permitindo que o JavaScript acesse e modifique elementos da tela dinamicamente.</p>
         <p><strong>5. Diferenças de propriedades:</strong><br>
-        -<i>innerHTML:</i> Retorna o texto junto com as tags HTML que estiverem dentro.<br>
-        -<i>innerText:</i> Retorna apenas o texto que está visível na tela.<br>
-        -<i>textContent:</i> Retorna o texto puro do código-fonte, ignorando a formatação e ocultações.
+        - <i>innerHTML:</i> Retorna o texto junto com as tags HTML que estiverem dentro.<br>
+        - <i>innerText:</i> Retorna apenas o texto que está visível na tela.<br>
+        - <i>textContent:</i> Retorna o texto puro do código-fonte, ignorando a formatação e ocultações.
         </p>
     </div>  
 
     <div class="questao">
-    <h2>Questões 2 e 3 </h2>
-    <div id="caixa-paragrafos">
-        <p>Primeiro Parágrafo</p>
-        <p>Segundo Parágrafo</p>
-        <p>Terceiro Parágrafo</p>
-    </div>
-    <button id="botaoContar"> Contar Parágrafos</button>
-    <div id="resultado-contagem" style="color: blue;font-weight: bold;margin-top: 10px;"></div>
+        <h2>Questões 2 e 3 </h2>
+        <div id="caixa-paragrafos">
+            <p>Primeiro Parágrafo</p>
+            <p>Segundo Parágrafo</p>
+            <p>Terceiro Parágrafo</p>
+        </div>
+        <button id="botaoContar">Contar Parágrafos</button>
+        <div id="resultado-contagem" style="color: var(--amarelo-detalhe); font-weight: bold; margin-top: 10px;"></div>
     </div>
 
     <div class="questao">
         <h2>Questão 4</h2>
-        <p id="paragrafo"> "Clique Aqui = Altera o texto" "Limpar = limpa o texto"</p>
+        <p id="paragrafo"> "Alterar Texto = Texto Alterado | Limpar = Limpa o Texto"</p>
         <button id="botaoAlterar">Alterar Texto</button>
         <button id="botaoLimpar">Limpar</button>
     </div>    
+
+    <div class="questao">
+        <h2>Questão 6: Alterar CSS via DOM</h2>
+        <p>Clique no botão para modificar o elemento abaixo:</p>
+        <div id="quadrado-alvo" style="width: 100px; height: 100px; background-color: #333; transition: 0.5s;"></div>
+        <button id="botaoEstilo">Modificar Estilo</button>
+    </div>
+    <div class="questao">
+        <h2>Questão 7: Caixa Alta</h2>
+        <p>Digite algo e clique no botão para copiar em maiúsculas:</p>
+        <input type="text" id="textoOrigem" placeholder="Digite aqui...">
+        <button id="botaoCopiar">Copiar</button>
+        <br><br>
+        <input type="text" id="textoDestino" placeholder="RESULTADO..." readonly>
+    </div>
+
+    <div class="questao">
+        <h2>Questão 8: Alto Contraste</h2>
+        <p>Alterne as cores da página (Preto e Branco) ou resete para o tema original:</p>
+        <button id="botaoContraste">Alto Contraste</button>
+        <button id="botaoReset">Resetar Cores</button>
+    </div>
+
+    <div class="questao">
+        <h2>Questão 9: Zoom da Fonte</h2>
+        <p>Altere o tamanho do texto de toda a página:</p>
+        <button id="botaoAumentar">Aumentar (A+)</button>
+        <button id="botaoDiminuir">Diminuir (A-)</button>
+    </div>
+    <div class="questao">
+        <h2>Questão 10: Calculadora</h2>
+        <input type="number" id="calcNum1" placeholder="Número 1">
+        <input type="number" id="calcNum2" placeholder="Número 2">
+        <br><br>
+        <label><input type="radio" name="operacao" id="opSoma" checked> Somar (+)</label>
+        <label><input type="radio" name="operacao" id="opSub"> Subtrair (-)</label>
+        <label><input type="radio" name="operacao" id="opMult"> Multiplicar (*)</label>
+        <label><input type="radio" name="operacao" id="opDiv"> Dividir (/)</label>
+        <button id="botaoCalcular">Calcular</button>
+        <div id="resultadoCalculo" style="color: var(--amarelo-detalhe); font-weight: bold; margin-top: 10px;"></div>
+    </div>
+
+    <div class="questao">
+        <h2>Questões 11 e 12: Criar Elementos</h2>
+        <input type="text" id="textoNovoElemento" placeholder="Digite um item...">
+        <button id="botaoAddLista">Adicionar à Lista (Q11)</button>
+        <button id="botaoAddSelect">Adicionar ao Select (Q12)</button>
+        
+        <h3>Lista (UL):</h3>
+        <ul id="listaDinamica"></ul>
+        
+        <h3>Menu Suspenso (Select):</h3>
+        <select id="selectDinamico" style="background-color: #000; color: var(--verde-principal); padding: 5px;">
+            <option value="">Itens adicionados...</option>
+        </select>
+    </div>
 </body>
 </html>
