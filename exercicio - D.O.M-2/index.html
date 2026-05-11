@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício DOM 02</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="questao-bloco">
+        <h3>Exibir Conteúdo</h3>
+        <input type="text" id="campoTexto" placeholder="Digite algo...">
+        <button id="btnExibirTexto">Exibir</button>
+        <div id="resultadoTexto" class="resultado"></div>
+        <div id="erroTexto" class="oculto erro"></div>
+    </div>
+
+    <div class="questao-bloco">
+        <h3>Taxa de Engajamento</h3>
+        <input type="number" id="interacoes" placeholder="Nº de Interações">
+        <input type="number" id="visualizacoes" placeholder="Nº de Visualizações">
+        <button id="btnCalcularEngajamento">Calcular</button>
+        <div id="resultadoEngajamento" class="resultado"></div>
+        <div id="erroEngajamento" class="oculto erro"></div>
+    </div>
+
+    <div class="questao-bloco">
+        <h3>Upload de Imagem</h3>
+        <input type="file" id="uploadImagem" accept=".png,.jpg,.jpeg,.webp">
+        <button id="btnCarregarImagem">Carregar Imagem</button>
+        <div id="resultadoImagemQ4" class="container-imagem"></div>
+    </div>
+
+   <div class="questao-bloco">
+    <h3>Seleção de Imagens</h3>
+
+    <select id="selectImagens">
+        <option value="">Selecione uma imagem...</option>
+
+        <option value="https://picsum.photos/id/237/300/200">
+            Imagem 1
+        </option>
+
+        <option value="https://picsum.photos/id/1025/300/200">
+            Imagem 2
+        </option>
+
+        <option value="https://picsum.photos/id/1069/300/200">
+            Imagem 3
+        </option>
+    </select>
+
+    <div id="resultadoImagemQ5" class="container-imagem"></div>
+</div>
+
+    <div class="questao-bloco">
+        <h3>Redes Sociais</h3>
+        <div>
+            <label><input type="checkbox" name="redesSociais" value="Facebook"> Facebook</label>
+            <label><input type="checkbox" name="redesSociais" value="Twitter"> Twitter</label>
+            <label><input type="checkbox" name="redesSociais" value="Instagram"> Instagram</label>
+            <label><input type="checkbox" name="redesSociais" value="LinkedIn"> LinkedIn</label>
+            <label><input type="checkbox" name="redesSociais" value="TikTok"> TikTok</label>
+        </div>
+        <br>
+        <button id="btnRedesSociais">Exibir Redes</button>
+        <div id="resultadoRedes" class="resultado"></div>
+        <div id="erroRedes" class="oculto erro"></div>
+    </div>
+
+    <div class="questao-bloco">
+        <h3>Lista de Hashtags</h3>
+        <input type="text" id="campoHashtag" placeholder="Digite a hashtag">
+        <button id="btnAdicionarHashtag">Adicionar</button>
+        <button id="btnRemoverHashtag">Remover Selecionada</button>
+        <br><br>
+        <select id="selectHashtags" size="5"></select>
+        <div id="erroHashtag" class="oculto erro"></div>
+    </div>
+
+    <div class="questao-bloco">
+        <h3>Mover Ativos Financeiros</h3>
+        <div class="container-ativos">
+            <div>
+                <label>Ativos Disponíveis</label><br>
+                <select id="ativosDisponiveis" multiple>
+                    <option value="AAPL">Apple (AAPL)</option>
+                    <option value="GOOGL">Google (GOOGL)</option>
+                    <option value="AMZN">Amazon (AMZN)</option>
+                    <option value="MSFT">Microsoft (MSFT)</option>
+                    <option value="TSLA">Tesla (TSLA)</option>
+                </select>
+            </div>
+            
+            <div class="botoes-ativos">
+                <button id="btnMoverDireita">&gt;&gt;</button>
+                <button id="btnMoverEsquerda">&lt;&lt;</button>
+            </div>
+            
+            <div>
+                <label>Carteira de Investimentos</label><br>
+                <select id="carteiraInvestimentos" multiple></select>
+            </div>
+        </div>
+        <div id="erroAtivos" class="oculto erro"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

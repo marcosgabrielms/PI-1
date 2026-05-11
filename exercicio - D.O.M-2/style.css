@@ -1,0 +1,147 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 20px;
+    margin: 0;
+}
+
+.questao-bloco {
+    background-color: #334155;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #475569;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    margin-top: 0;
+    color: #f8fafc;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #64748b;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input,
+select {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 250px;
+}
+
+button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #60a5fa;
+}
+
+button:disabled {
+    background-color: #475569;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.oculto {
+    display: none;
+}
+
+.erro {
+    background-color: #7f1d1d;
+    color: #fecaca;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 1px solid #b91c1c;
+}
+
+.resultado {
+    margin-top: 10px;
+    color: #86efac;
+    font-weight: bold;
+}
+
+.container-imagem img {
+    max-width: 300px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 2px solid #475569;
+}
+
+#selectHashtags {
+    width: 250px;
+    background-color: #0f172a;
+}
+
+.container-ativos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.botoes-ativos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+select[multiple] {
+    width: 230px;
+    height: 180px;
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+label {
+    color: #e2e8f0;
+}
+
+input[type="checkbox"] {
+    accent-color: #3b82f6;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
