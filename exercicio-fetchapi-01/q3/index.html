@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APIs Públicas — Questão 3 | IFPI ADS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>APIs Públicas</h1>
+    <p>Questão 3 — Programação para a WEB Front-end · IFPI ADS</p>
+  </header>
+
+  <main class="apis-grid">
+
+    <section class="api-card weather-card">
+      <div class="card-header">
+        <span class="icon">🌤️</span>
+        <div>
+          <h2>Previsão do Tempo</h2>
+          <p class="source">open-meteo.com + geocoding-api.open-meteo.com</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="input-row">
+          <input
+            type="text"
+            id="weatherInput"
+            placeholder="Ex: Teresina, Fortaleza, São Paulo…"
+          />
+          <button class="btn" id="btnWeather">Buscar</button>
+        </div>
+        <div class="result hidden" id="weatherResult"></div>
+      </div>
+    </section>
+
+    <section class="api-card pokemon-card">
+      <div class="card-header">
+        <span class="icon">⚡</span>
+        <div>
+          <h2>Pokédex</h2>
+          <p class="source">pokeapi.co</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="input-row">
+          <input
+            type="text"
+            id="pokeInput"
+            placeholder="Ex: pikachu, charizard, 25…"
+          />
+          <button class="btn" id="btnPoke">Buscar</button>
+        </div>
+        <div class="result hidden" id="pokeResult"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

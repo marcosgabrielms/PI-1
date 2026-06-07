@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg: #f0f4ff;
+  --surface: #ffffff;
+  --border: #dde3f5;
+  --text: #1a1a2e;
+  --text-muted: #7080a0;
+  --radius: 16px;
+
+  /* Weather colors */
+  --w-accent: #4a90e2;
+  --w-light: #e8f0ff;
+
+  /* Poke colors */
+  --p-accent: #e74c3c;
+  --p-light: #fff0f0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.page-header p {
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+.apis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .apis-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Card base ────────────────────────────────────────── */
+.api-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+
+.card-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-header .icon {
+  font-size: 1.5rem;
+}
+
+.card-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card-header .source {
+  font-size: 0.7rem;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 0.1rem;
+}
+
+/* Weather */
+.weather-card .card-header { background: var(--w-light); }
+.weather-card .card-header h2 { color: var(--w-accent); }
+.weather-card .card-header .source { color: #7099cc; }
+.weather-card .btn { background: var(--w-accent); }
+.weather-card input:focus { border-color: var(--w-accent); box-shadow: 0 0 0 3px rgba(74,144,226,0.12); }
+
+/* Pokemon */
+.pokemon-card .card-header { background: var(--p-light); }
+.pokemon-card .card-header h2 { color: var(--p-accent); }
+.pokemon-card .card-header .source { color: #cc7070; }
+.pokemon-card .btn { background: var(--p-accent); }
+.pokemon-card input:focus { border-color: var(--p-accent); box-shadow: 0 0 0 3px rgba(231,76,60,0.12); }
+
+/* ── Card body ─────────────────────────────────────────── */
+.card-body {
+  padding: 1.5rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="text"], input[type="number"] {
+  flex: 1;
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus { outline: none; }
+
+.btn {
+  padding: 0.65rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+/* ── Result areas ──────────────────────────────────────── */
+.result {
+  margin-top: 1rem;
+  min-height: 60px;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.result.hidden { display: none; }
+.result .error { color: var(--p-accent); font-weight: 700; }
+
+/* ── Weather result ────────────────────────────────────── */
+.weather-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.weather-main {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--w-light);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.weather-temp {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--w-accent);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.weather-city {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.weather-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.weather-stat {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+}
+
+.weather-stat .label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.weather-stat .value {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--w-accent);
+  margin-top: 0.1rem;
+}
+
+/* ── Pokemon result ────────────────────────────────────── */
+.pokemon-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pokemon-sprite {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.15));
+}
+
+.pokemon-name {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.pokemon-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.pokemon-types {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0.4rem 0;
+}
+
+.type-badge {
+  padding: 0.2rem 0.65rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.type-fire { background: #F08030; }
+.type-water { background: #6890F0; }
+.type-grass { background: #78C850; }
+.type-electric { background: #F8D030; color: #333; }
+.type-psychic { background: #F85888; }
+.type-ice { background: #98D8D8; color: #333; }
+.type-dragon { background: #7038F8; }
+.type-dark { background: #705848; }
+.type-fairy { background: #EE99AC; }
+.type-normal { background: #A8A878; }
+.type-fighting { background: #C03028; }
+.type-flying { background: #A890F0; }
+.type-poison { background: #A040A0; }
+.type-ground { background: #E0C068; color: #333; }
+.type-rock { background: #B8A038; }
+.type-bug { background: #A8B820; color: #333; }
+.type-ghost { background: #705898; }
+.type-steel { background: #B8B8D0; color: #333; }
+
+.pokemon-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.pokemon-stats span { font-weight: 700; color: var(--text); }
+
+.loading-text {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+}
