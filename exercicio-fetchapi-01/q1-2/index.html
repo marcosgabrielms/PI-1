@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Criptomoedas — Binance</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <p class="logo">⬡ Binance API</p>
+      <h1>Conversor de<br>Criptomoedas</h1>
+      <p class="subtitle">Cotações em tempo real via Fetch API</p>
+    </header>
+
+    <div class="card">
+
+      <div class="field-group">
+        <div class="field">
+          <label for="moedaBase">Moeda Base</label>
+          <select id="moedaBase">
+            <option value="">Selecione...</option>
+            <option value="BTC">BTC — Bitcoin</option>
+            <option value="ETH">ETH — Ethereum</option>
+            <option value="SOL">SOL — Solana</option>
+            <option value="XRP">XRP — Ripple</option>
+            <option value="DOGE">DOGE — Dogecoin</option>
+            <option value="BNB">BNB — BNB</option>
+            <option value="ADA">ADA — Cardano</option>
+            <option value="AVAX">AVAX — Avalanche</option>
+          </select>
+        </div>
+
+        <button class="btn-swap" id="btnInverter" title="Inverter moedas">⇄</button>
+
+        <div class="field">
+          <label for="moedaConversao">Moeda de Conversão</label>
+          <select id="moedaConversao">
+            <option value="">Selecione...</option>
+            <option value="USDT">USDT — Tether</option>
+            <option value="BRL">BRL — Real Brasileiro</option>
+            <option value="BTC">BTC — Bitcoin</option>
+            <option value="ETH">ETH — Ethereum</option>
+            <option value="BNB">BNB — BNB</option>
+            <option value="BUSD">BUSD — Binance USD</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" id="btnConsultar">Consultar Preço</button>
+        <button class="btn btn-secondary" id="btnLimpar">Limpar</button>
+      </div>
+
+      <div class="result-box" id="resultado">
+        <span class="result-label">O resultado será exibido aqui</span>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>Dados: api.binance.com &nbsp;·&nbsp; Fetch API &nbsp;·&nbsp; IFPI ADS</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
